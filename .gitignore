@@ -1,2 +1,6 @@
 *.JPG
 data/plantvillage dataset/*
+
+mlruns/**
+
+mlartifacts/**
