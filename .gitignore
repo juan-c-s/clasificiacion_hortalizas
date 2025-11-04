@@ -1,6 +1,9 @@
 *.JPG
 data/plantvillage dataset/*
+data/preprocessed_variants_2/*
+data/splits/*
 
 mlruns/**
 
 mlartifacts/**
+
