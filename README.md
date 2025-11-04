@@ -1,11 +1,19 @@
 # Tomato Disease Classification
 
-A deep learning project for classifying tomato plant diseases using the PlantVillage dataset. This project focuses specifically on the tomato image subset (36,320 images with 10 different health conditions) from the full PlantVillage dataset.
+A deep learning project for classifying tomato plant diseases using the PlantVillage dataset. This project focuses specifically on the tomato image subset (18,160 images with 10 different health conditions) from the full PlantVillage dataset.
 
 ## Repository Structure
 
 ```
 clasificiacion_hortalizas/
+├── analysis/
+│   ├── data_set_analysis.ipynb          # Dataset analysis and statistics
+│   ├── eda.ipynb                         # Exploratory data analysis
+│   └── estadisticas_color_por_enfermedad.csv  # Color statistics by disease
+├── assets/
+│   ├── analisis_caracteristicas_color.png
+│   ├── enfermedades_tomate_distribucion.png
+│   └── figura4_distribucion_enfermedades.png
 ├── data/
 │   ├── plantvillage dataset/          # Raw image dataset (created after extraction)
 │   │   ├── color/                     # Color images (54,305)
@@ -20,8 +28,7 @@ clasificiacion_hortalizas/
 ├── preprocessing/
 │   ├── extract_data.ipynb             # Step 1: Download dataset from Kaggle
 │   ├── process_data.ipynb             # Step 2: Generate metadata parquet file
-│   ├── eda.ipynb                      # Step 3: Exploratory data analysis
-│   └── preprocess.ipynb               # Step 4: Create preprocessed variants
+│   └── preprocess.ipynb               # Step 3: Create preprocessed variants
 ├── training/
 │   ├── model-selection.ipynb          # Experiment 1: Benchmark 6 models (fixed resolution)
 │   └── general_model.ipynb            # Experiment 2: Resolution evaluation (selected model)
@@ -34,9 +41,12 @@ clasificiacion_hortalizas/
 
 ```
 1. DATA PREPROCESSING
-   └─> Extract → Process → EDA → Preprocess Variants
+   └─> Extract → Process → Preprocess Variants
    
-2. MODEL TRAINING
+2. DATA ANALYSIS
+   └─> Exploratory Data Analysis → Dataset Analysis
+   
+3. MODEL TRAINING
    ├─> Experiment 1: Model Selection (6 architectures)
    └─> Experiment 2: Resolution Optimization (best model)
 ```
@@ -49,8 +59,14 @@ Run the preprocessing notebooks in order:
 
 1. **`preprocessing/extract_data.ipynb`** - Downloads the PlantVillage dataset from Kaggle
 2. **`preprocessing/process_data.ipynb`** - Scans all images and generates the metadata parquet file
-3. **`preprocessing/eda.ipynb`** - Performs exploratory data analysis with visualizations
-4. **`preprocessing/preprocess.ipynb`** - Creates preprocessed image variants at different resolutions and quality levels
+3. **`preprocessing/preprocess.ipynb`** - Creates preprocessed image variants at different resolutions and quality levels
+
+### Data Analysis
+
+Run the analysis notebooks for insights into the dataset:
+
+1. **`analysis/eda.ipynb`** - Exploratory data analysis of the Data source Kaggle
+2. **`analysis/data_set_analysis.ipynb`** - Analysis of Tomato samples
 
 ### Model Training
 
