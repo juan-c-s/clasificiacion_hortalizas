@@ -7,3 +7,6 @@ mlruns/**
 
 mlartifacts/**
 
+.idea/
+.idea/
+.DS_Store
