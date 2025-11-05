@@ -7,3 +7,5 @@ mlruns/**
 
 mlartifacts/**
 
+.idea/
+.idea/
